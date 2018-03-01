@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Мягкая мебель</title>
+	<meta name="description" content="Создание адаптивного сайта" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body ng-app="myApp">
+	<header class="top_header">
+		<div class="header_topline">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<button class="auth_buttons hidden-md hidden-lg hidden-sm"><i class="fa fa-user"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-md-12">
+				<div class="row">
+					<a href="index.html" class="logo">Мягкая мебель</a>
+					<nav class="maian_mnu clearfix">
+						<button class="main_mnu_button hidden-md hidden-lg"><i class="fa fa-bars"></i></button>
+						<ul>
+							<li class="active"><a id="home" href="#home">Главная</a></li>
+							<li><a id="line" href="#line">Прямые диваны</a></li>
+							<li><a id="corner" href="#corner">Угловые диваны</a></li>
+							<li><a id="sofa" href="#sofa">Кресла и пуфы</a></li>
+						</ul>
+					</nav>
+					<div class="sider_container">
+						<div class="next_button"><i class="fa fa-angle-right"></i></div>
+						<div class="prev_button"><i class="fa fa-angle-left"></i></div>
+						<div class="carousel">
+							<div class="slide_item"><a class="fancybox" data-fancybox-group="group" href="img/slide1.jpg"><img src="img/slide1.jpg" alt="alt" /></a></div>
+							<div class="slide_item"><a class="fancybox" data-fancybox-group="group" href="img/slide2.jpg"><img src="img/slide2.jpg" alt="alt" /></a></div>
+							<div class="slide_item"><a class="fancybox" data-fancybox-group="group" href="img/slide3.jpg"><img src="img/slide3.jpg" alt="alt" /></a></div>
+							<div class="slide_item"><a class="fancybox" data-fancybox-group="group" href="img/slide4.jpg"><img src="img/slide4.jpg" alt="alt" /></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="main_content">
+		<div class="container">
+
+		</div>
+	</section>
+	
+
+
+	<div class="container">
+		<div id="iline" ng-controller="LineCtrl">
+			<div class="staff"  ng-repeat="line in lineshop"> 
+				<table>
+				
+				<tr>
+					<td><h2>{{line.lineName}}</h2></td>
+				</tr>
+
+				<tr>
+ 					<th>
+   						<figure>
+    						<img src="{{line.linePhoto}}" alt="line"/>
+  						</figure>
+  					</th>
+ 				</tr>
+
+				<tr>
+					<th>Размеры дивана, см:</th>
+					<td>{{line.lineSize}}</td>
+				</tr>
+
+				<tr>
+					<th>Высота дивана, см:</th>
+					<td>{{line.lineHeight}}</td>
+				</tr>
+
+				<tr>
+					<th>Вес дивана, кг:</th>
+					<td>{{line.lineWeight}}</td>
+				</tr>
+
+				<tr>
+					<th>Цена:</th>
+					<td>{{line.linePrice}}</td>
+				</tr>
+
+			</table>
+			</div>
+		</div>
+
+
+
+
+		<div id="icorner" ng-controller="CornerCtrl">
+			<div class="staff"  ng-repeat="corner in cornershop"> 
+				<table>
+				
+				<tr>
+					<td><h2>{{corner.cornerName}}</h2></td>
+				</tr>
+
+				<tr>
+ 					<th>
+   						<figure>
+    						<img src="{{corner.cornerPhoto}}" alt="corner"/>
+  						</figure>
+  					</th>
+ 				</tr>
+
+				<tr>
+					<th>Размеры дивана, см:</th>
+					<td>{{corner.cornerSize}}</td>
+				</tr>
+
+				<tr>
+					<th>Высота дивана, см:</th>
+					<td>{{corner.cornerHeight}}</td>
+				</tr>
+
+				<tr>
+					<th>Вес дивана, кг:</th>
+					<td>{{corner.cornerWeight}}</td>
+				</tr>
+
+				<tr>
+					<th>Цена:</th>
+					<td>{{corner.cornerPrice}}</td>
+				</tr>
+
+			</table>
+			</div>
+		</div>
+
+
+
+		<div id="isofa" ng-controller="SofaCtrl">
+			<div class="staff"  ng-repeat="sofa in sofashop"> 
+				<table>
+				
+				<tr>
+					<td><h2>{{sofa.sofaName}}</h2></td>
+				</tr>
+
+				<tr>
+ 					<th>
+   						<figure>
+    						<img src="{{sofa.sofaPhoto}}" alt="sofa"/>
+  						</figure>
+  					</th>
+ 				</tr>
+
+				<tr>
+					<th>Размеры дивана, см:</th>
+					<td>{{sofa.sofaSize}}</td>
+				</tr>
+
+				<tr>
+					<th>Высота дивана, см:</th>
+					<td>{{sofa.sofaHeight}}</td>
+				</tr>
+
+				<tr>
+					<th>Вес дивана, кг:</th>
+					<td>{{sofa.sofaWeight}}</td>
+				</tr>
+
+				<tr>
+					<th>Цена:</th>
+					<td>{{sofa.sofaPrice}}</td>
+				</tr>
+
+			</table>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+
+	<script type="text/javascript" src="js/module1.js"></script> 
+	<script type="text/javascript" src="js/module1.show.js"></script>
+
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+	<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="libs/countdown/jquery.plugin.js"></script>
+	<script src="libs/countdown/jquery.countdown.min.js"></script>
+	<script src="libs/countdown/jquery.countdown-ru.js"></script>
+	<script src="libs/landing-nav/navigation.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/show.js"></script>
+	<script src="js/module1.show.js"></script>
+</body>
+</html>
